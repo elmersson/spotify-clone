@@ -25,8 +25,7 @@ const getSongsByTitle = async (title: string): Promise<Song[]> => {
     console.log(error.message);
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (data as any) || [];
+  return (data as Song[]) || [];
 };
 
 export default getSongsByTitle;
